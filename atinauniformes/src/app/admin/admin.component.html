@@ -1,0 +1,71 @@
+@if(errorMessage){
+<div class="error">
+  {{ errorMessage }}
+</div>
+}
+
+<div>
+
+
+  <h2>Category Administration</h2>
+  <form (submit)="addCategory()">
+    <label for="cat_name">Name:</label>
+    <input id="cat_name" [(ngModel)]="category.cat_name" name="cat_name" required>
+    <label for="cat_description">Description:</label>
+    <input id="cat_description" [(ngModel)]="category.cat_description" name="cat_description">
+    <button type="submit">Add Category</button>
+  </form>
+  <ul>
+    @for(category of categories; track category){
+    <li >
+      <input [(ngModel)]="category.cat_name" (blur)="updateCategory(category)">
+      <input [(ngModel)]="category.cat_description" (blur)="updateCategory(category)">
+      <button (click)="deleteCategory(category.cat_id)">Delete</button>
+    </li>
+    }
+  </ul>
+
+</div>
+
+
+
+
+<div>
+
+
+  <h2>Product Administration</h2>
+  <form (submit)="addProduct()">
+    <label for="cat_id">Category:</label>
+    <select id="cat_id" [(ngModel)]="product.cat_id" name="cat_id" required>
+      @for(category of categories; track category){
+        <option [value]="category.cat_id">{{ category.cat_name }}</option>
+      }
+    </select>
+    <label for="prod_name">Name:</label>
+    <input id="prod_name" [(ngModel)]="product.prod_name" name="prod_name" required>
+    <label for="prod_description">Description:</label>
+    <input id="prod_description" [(ngModel)]="product.prod_description" name="prod_description">
+    <label for="prod_price">Price:</label>
+    <input id="prod_price" [(ngModel)]="product.prod_price" name="prod_price" type="number" step="0.01" required>
+    <label for="prod_stock_quantity">Stock:</label>
+    <input id="prod_stock_quantity" [(ngModel)]="product.prod_stock_quantity" name="prod_stock_quantity" type="number" required>
+    <label for="prod_image_url">Image URL:</label>
+    <input id="prod_image_url" [(ngModel)]="product.prod_image_url" name="prod_image_url">
+    <button type="submit">Add Product</button>
+  </form>
+
+  <ul>
+    @for(product of products; track product){
+    <li>
+      <select [(ngModel)]="product.cat_id" (change)="updateProduct(product)">
+        <option *ngFor="let category of categories" [value]="category.cat_id">{{ category.cat_name }}</option>
+      </select>
+      <input [(ngModel)]="product.prod_name" (blur)="updateProduct(product)">
+      <input [(ngModel)]="product.prod_description" (blur)="updateProduct(product)">
+      <input [(ngModel)]="product.prod_price" type="number" step="0.01" (blur)="updateProduct(product)">
+      <input [(ngModel)]="product.prod_stock_quantity" type="number" (blur)="updateProduct(product)">
+      <input [(ngModel)]="product.prod_image_url" (blur)="updateProduct(product)">
+      <button (click)="deleteProduct(product.prod_id)">Delete</button>
+    </li>
+    }
+  </ul>

@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 
 export class AppService {
 
-  private baseUrl = 'http://localhost:3000'; // Cambia esto a la URL de tu backend
+  private baseUrl = 'http://localhost:3000/api'; // Cambia esto a la URL de tu backend
 
   constructor(private http: HttpClient) { }
 
