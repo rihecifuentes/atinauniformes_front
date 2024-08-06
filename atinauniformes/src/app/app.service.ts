@@ -100,6 +100,19 @@ export class AppService {
     );
   }
 
+
+
+
+  uploadImage(file: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('image', file, file.name);
+
+    return this.http.post(`${this.baseUrl}/upload`, formData).pipe(
+      catchError(this.handleError)
+    );
+  }
+  
+
   // Helper function to get the authentication headers
   private getAuthHeaders(): { headers: HttpHeaders } {
     const token = localStorage.getItem('token'); // Asegúrate de almacenar el token de autenticación en localStorage
