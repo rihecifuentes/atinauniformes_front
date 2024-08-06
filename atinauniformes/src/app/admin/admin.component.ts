@@ -28,6 +28,7 @@ export class AdminComponent {
 
   add_bool: boolean = true
   bool_editAdd: boolean = false
+  bool_add_cat: boolean = true
 
 
   constructor(private apiService: AppService) { }
@@ -35,7 +36,22 @@ export class AdminComponent {
 
   ngOnInit(): void {
     this.loadCategories();
-    this.loadProducts();
+    // this.loadProducts();
+  }
+
+  openModalCategory(category:any): void {
+    console.log(category)
+    if(category){
+      this.category = category
+      this.bool_add_cat = false
+    }
+    else{
+      this.category = { cat_name: '', cat_description: '' };
+      this.bool_add_cat = true
+    }
+    const modalElement = document.getElementById('modalCategory');
+    this.modal = new bootstrap.Modal(modalElement);
+    this.modal.show();
   }
 
   loadCategories(): void {
@@ -68,8 +84,9 @@ export class AdminComponent {
         if (index !== -1) {
           this.categories[index] = data;
         }
-        this.openModal()
+        // this.openModal()
         this.message = 'Data actualizada'
+        this.modal.hide()
       },
       error => {
         this.errorMessage = error;
@@ -90,6 +107,15 @@ export class AdminComponent {
     );
   }
 
+  colegio_name = ''
+
+  selectedColegio(category: any): void {
+   
+    this.category = category
+    this.colegio_name = category.cat_name
+    this.loadProducts()
+  }
+
 
 
 
@@ -107,7 +133,7 @@ export class AdminComponent {
 
 
   loadProducts(): void {
-    this.apiService.getProducts().subscribe(
+    this.apiService.getProductsByCategory(this.category.cat_id).subscribe(
       data => {
         this.products = data;
       },

@@ -50,6 +50,22 @@
 }
 
 
+.dr-card a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+
+.item-category{
+    /* background-color: #e0e0e0ed; */
+    cursor: pointer;
+    /* border: 1px solid #1e1e1e; */
+}
+
+.item-category:hover{
+    background-color:#1e1e1e;
+    color: #e0e0e0ed;
+}
 
 
 
@@ -134,22 +150,3 @@ button.next {
 }
 
 
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2em 0;
-    text-align: center;
-}
-
-.footer .quick-links a {
-    color: #fff;
-    margin: 0 0.5em;
-}
-
-.footer .social-media a {
-    color: #fff;
-    margin: 0 0.5em;
-    font-size: 1.2em;
-}

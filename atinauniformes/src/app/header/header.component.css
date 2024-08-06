@@ -5,19 +5,15 @@
 
 
 .navbar {
-    /* position: fixed; */
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    /* Desenfoque del fondo */
     padding: 0;
     z-index: 1000;
-    box-shadow: 0px 0px 10px #243241;
-    /* background-color: #1e1e1e; */
-    /* color: #e0e0e0; */
-}
+    box-shadow: 0px 0px 5px #243241;
+    background-color: #fff;
 
-/* font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica, Apple Color Emoji, Arial, Segoe UI Emoji, Segoe UI Symbol; */
+}
 
 
 
