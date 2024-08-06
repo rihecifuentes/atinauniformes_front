@@ -6,7 +6,6 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SearchComponent } from './search/search.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin/admin.component';
 
 

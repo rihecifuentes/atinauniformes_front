@@ -14,6 +14,8 @@ export class ProductListComponent {
   products: any[] = [];
   errorMessage: string = '';
 
+  nombre_colegio = ''
+
   constructor(
     private apiService: AppService, 
     private route: ActivatedRoute
@@ -21,10 +23,13 @@ export class ProductListComponent {
 
   ngOnInit(): void {
     const cat_id = this.route.snapshot.paramMap.get('cat_id');
+    console.log(cat_id)
     this.apiService.getProductsByCategory(Number(cat_id)).subscribe(
       data => {
         this.products = data;
-        console.log(data)
+
+        this.nombre_colegio = this.products[0].cat_name
+        // console.log(data)
       },
       error => {
         console.log(error)

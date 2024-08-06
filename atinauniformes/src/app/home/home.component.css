@@ -1,0 +1,155 @@
+/* home-page.component.css */
+
+
+.search-bar input {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+}
+
+.nav-icons a {
+    margin: 0 0.5em;
+    font-size: 1.2em;
+}
+
+
+.navbar {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    /* Desenfoque del fondo */
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px #243241;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    list-style: none;
+}
+
+.navigation li {
+    /* margin: 0 1em; */
+    height: 100%;
+}
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+}
+
+.navigation a:hover, .navigation li:hover {
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+
+
+
+
+
+
+/* home-page.component.css */
+
+.main-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 500px;
+}
+
+button.next {
+    right: 500px;
+}
+
+
+
+
+
+
+/* .categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 0;
+} */
+
+.category {
+    text-align: center;
+}
+
+.featured-products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.product {
+    text-align: center;
+}
+
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.footer .quick-links a {
+    color: #fff;
+    margin: 0 0.5em;
+}
+
+.footer .social-media a {
+    color: #fff;
+    margin: 0 0.5em;
+    font-size: 1.2em;
+}
