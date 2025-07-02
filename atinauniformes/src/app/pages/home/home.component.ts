@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppService } from '../../app.service';
 import { FormsModule } from '@angular/forms';
+declare var bootstrap: any;
 
 
 @Component({
@@ -22,16 +23,55 @@ export class HomeComponent {
   ];
 
   tipos = [
-    { tip_name: 'Uniformes Genericos'},
-    { tip_name: 'Uniformes Escolares'}
+    { tip_name: 'Uniformes Genericos' },
+    { tip_name: 'Uniformes Escolares' }
   ]
 
-  constructor(private apiService: AppService) { }
+  constructor(private apiService: AppService) {
+    this.categories = [
+      {
+        "cat_id": 2,
+        "cat_name": "MELFORD",
+        "cat_description": "Colegio Melford, este es una descricoposi unos o,dsdsasas2",
+        "cat_state": true,
+        "img": "/assets/img/image1.png"
+      },
+      {
+        "cat_id": 4,
+        "cat_name": "SANTA BARBARA",
+        "cat_description": "Colegio Santa Barbara",
+        "cat_state": true,
+        "img": "/assets/img/image2.png"
+      },
+      {
+        "cat_id": 3,
+        "cat_name": "SAN CARLOS",
+        "cat_description": "Colegio San Carlos",
+        "cat_state": true,
+        "img": "/assets/img/image3.png"
+      },
+      {
+        "cat_id": 5,
+        "cat_name": "PAULA JARAQUEMADA",
+        "cat_description": "Colegio Paula Jaraquemada",
+        "cat_state": true,
+        "img": "/assets/img/image4.png"
+      },
+      {
+        "cat_id": 6,
+        "cat_name": "RAYITO",
+        "cat_description": "Colegio Rayito",
+        "cat_state": true,
+        "img": "/assets/img/image5.png"
+      }
+    ]
+  }
 
   ngOnInit(): void {
-    this.loadCategories();
-
+    // this.loadCategories();
   }
+
+
 
 
   loadCategories(): void {
@@ -50,6 +90,20 @@ export class HomeComponent {
     );
   }
 
+
+
+  modal: any
+
+  openModal() {
+    const modalElement = document.getElementById('modalAdmin');
+    this.modal = new bootstrap.Modal(modalElement);
+    this.modal.show();
+  }
+
+
+  closeModal() {
+    this.modal.hide()
+  }
 
 
 }
