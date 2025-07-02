@@ -1,0 +1,30 @@
+
+
+.schools-section,.products-section{
+    padding: 100px 0 0 0
+}
+
+.schools-section {
+    background-color: var(--secondary-color)
+}
+
+.schools-section a{
+    text-decoration: none;
+}
+
+.school-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    cursor: pointer;
+    border: 2px solid transparent
+}
+
+.school-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color)
+}

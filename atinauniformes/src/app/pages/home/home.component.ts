@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from '../../app.service';
 import { FormsModule } from '@angular/forms';
 
 
@@ -38,6 +38,11 @@ export class HomeComponent {
     this.apiService.getCategories().subscribe(
       data => {
         this.categories = data;
+        let n = 1
+        for (let colegio of this.categories) {
+          colegio.img = `/assets/img/image${n}.png`
+          n++
+        }
       },
       error => {
         console.log(error);
@@ -46,30 +51,5 @@ export class HomeComponent {
   }
 
 
-  currentSlide = 0;
-  currentTranslate = 0;
-
-  prevSlide() {
-    if (this.currentSlide > 0) {
-      this.currentSlide--;
-    } else {
-      this.currentSlide = this.slides.length - 1;
-    }
-    this.updateTranslate();
-  }
-
-  nextSlide() {
-    if (this.currentSlide < this.slides.length - 1) {
-      this.currentSlide++;
-    } else {
-      this.currentSlide = 0;
-    }
-    this.updateTranslate();
-  }
-
-  updateTranslate() {
-    console.log(this.currentSlide)
-    this.currentTranslate = -this.currentSlide * 800;
-  }
 
 }

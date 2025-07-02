@@ -1,15 +1,17 @@
+
+
 import { Component } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from '../../app.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-product-list',
+  selector: 'app-colegio',
   standalone: true,
   imports: [],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  templateUrl: './colegio.component.html',
+  styleUrl: './colegio.component.css'
 })
-export class ProductListComponent {
+export class ColegioComponent {
 
   products: any[] = [];
   errorMessage: string = '';

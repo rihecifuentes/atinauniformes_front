@@ -1,0 +1,141 @@
+<main class="main">
+  <!-- Sección Hero -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2 class="hero-title">Uniformes Escolares de Calidad Premium</h2>
+        <p class="hero-description">Encuentra los mejores uniformes para tu colegio. Calidad, comodidad y estilo en cada
+          prenda.</p>
+        <button class="cta-button">Ver Catálogo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Insignias de Colegios -->
+  <section id="colegios" class="schools-section">
+    <div class="container">
+      <h2 class="section-title">Colegios Disponibles</h2>
+      <!-- <p class="section-subtitle">Selecciona tu institución para ver los uniformes específicos</p> -->
+
+      <!-- Grid de insignias de colegios -->
+      <div class="row" id="schoolsGrid">
+        @for(colegio of categories; track colegio){
+        <a href="/c/{{colegio.cat_id}}" class="col-6 col-md-3 school-card">
+          <div >
+            <div class="school-badge"><img src="{{colegio.img}}" alt="" width="50"></div>
+            <h3 class="school-name">{{ colegio.cat_name }}</h3>
+            <p class="school-location">{{ colegio.cat_description }}</p>
+          </div>
+        </a>
+        }
+
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Sección de Productos -->
+  <section id="productos" class="products-section">
+    <div class="container">
+      <h2 class="section-title">Productos Destatados</h2>
+      <p class="section-subtitle">Uniformes de calidad premium para todos los niveles educativos</p>
+
+      <!-- Grid de productos -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Poleras -->
+        <div class="product-card" data-school="san-patricio" data-category="poleras" data-size="m">
+          <div class="product-image">
+            <img src="/assets/img/polera1.png"
+              alt="Polera San Patricio">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Polera San Patricio</h3>
+            <p class="product-school">Colegio San Patricio</p>
+            <p class="product-price">$15.990</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-school="santa-maria" data-category="poleras" data-size="s">
+          <div class="product-image">
+            <img src="/assets/img/polera1.png"
+              alt="Polera Santa María">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Polera Santa María</h3>
+            <p class="product-school">Santa María</p>
+            <p class="product-price">$14.990</p>
+          </div>
+        </div>
+
+        <!-- Pantalones -->
+        <div class="product-card" data-school="manuel-belgrano" data-category="pantalones" data-size="l">
+          <div class="product-image">
+            <img src="/assets/img/buzo1.png"
+              alt="Pantalón Manuel Belgrano">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Pantalón Escolar</h3>
+            <p class="product-school">Manuel Belgrano</p>
+            <p class="product-price">$22.990</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-school="jose-marti" data-category="pantalones" data-size="m">
+          <div class="product-image">
+            <img src="/assets/img/falda1.png"
+              alt="Pantalón José Martí">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Pantalón Formal</h3>
+            <p class="product-school">José Martí</p>
+            <p class="product-price">$24.990</p>
+          </div>
+        </div>
+
+        <!-- Accesorios -->
+        <div class="product-card" data-school="san-patricio" data-category="accesorios" data-size="xs">
+          <div class="product-image">
+            <img src="/assets/img/polar1.png"
+              alt="Corbata San Patricio">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Corbata Escolar</h3>
+            <p class="product-school">San Patricio</p>
+            <p class="product-price">$8.990</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-school="santa-maria" data-category="accesorios" data-size="m">
+          <div class="product-image">
+            <img src="/assets/img/buzo2.png"
+              alt="Zapatos Santa María">
+            <div class="product-overlay">
+              <button class="quick-view">Vista Rápida</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Zapatos Escolares</h3>
+            <p class="product-school">Santa María</p>
+            <p class="product-price">$32.990</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

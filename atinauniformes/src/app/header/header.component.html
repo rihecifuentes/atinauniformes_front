@@ -1,57 +1,32 @@
-
-
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <!-- Logo a la izquierda -->
-    <a class="navbar-brand mx-4" href="/">
-      <img src="/assets/atinauniformes.jpg" alt="Logo" height="100">
-    </a>
-
-    <!-- Botón Toggler para dispositivos móviles -->
-    <button class="navbar-toggler btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Contenido del Navbar -->
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <div class="navbar-nav">
-        <!-- Enlaces a los modelos en el centro -->
-        <ul class="navbar-nav">
-          <!-- <div class="search-bar">
-            <input type="text" placeholder="Buscar productos...">
-          </div> -->
-          <li class="nav-item">
-            <div class="search-bar">
-              <input type="text" placeholder="Buscar productos...">
-            </div>
-          </li>
-
-        </ul>
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo de la marca -->
+      <div class="logo">
+        <a class="navbar-brand mx-4" href="/">
+          <img src="/assets/atinauniformes.jpg" alt="Logo" height="100">
+        </a>
+        <!-- <h1>AtinaUniformes</h1>
+        <span class="logo-subtitle">Calidad y Estilo</span> -->
       </div>
 
-      <div class="navbar-nav ms-auto">
-        <!-- Enlaces a Shop y Account a la derecha -->
-        <ul class="navbar-nav">
-          <li class="nav-item m-auto">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item m-auto">
-            <a class="nav-link" href="/contacto">Contacto</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/admin"><i class="far fa-user-circle m-2"> </i> </a>
-          </li>
+      <!-- Navegación principal -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#colegios" class="nav-link">Colegios</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin"><i class="far fa-user-circle m-2"> </i> </a> </li>
         </ul>
-      </div>
+      </nav>
 
-
-
-
-
-
-
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
-</nav>
+</header>
