@@ -64,7 +64,7 @@ export class AppService {
   }
 
   getProductsByCategory(cat_id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/categories/${cat_id}/products`).pipe(
+    return this.http.get(`${this.baseUrl}/categories/${cat_id}`).pipe(
       catchError(this.handleError)
     );
   }

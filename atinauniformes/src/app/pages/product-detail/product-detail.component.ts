@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from '../../app.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -29,3 +29,4 @@ export class ProductDetailComponent {
   }
 
 }
+

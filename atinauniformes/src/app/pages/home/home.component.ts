@@ -30,39 +30,53 @@ export class HomeComponent {
   constructor(private apiService: AppService) {
     this.categories = [
       {
+        "cat_id": 1,
+        "cat_name": "PALMARES",
+        "cat_description": "Colegio Palmares",
+        "cat_state": true,
+        "img": "/assets/img/PALMARES.jpeg"
+      },
+      {
         "cat_id": 2,
         "cat_name": "MELFORD",
-        "cat_description": "Colegio Melford, este es una descricoposi unos o,dsdsasas2",
+        "cat_description": "Colegio Melford",
         "cat_state": true,
-        "img": "/assets/img/image1.png"
+        "img": "/assets/img/MELFORD.jpeg"
       },
       {
         "cat_id": 4,
         "cat_name": "SANTA BARBARA",
         "cat_description": "Colegio Santa Barbara",
         "cat_state": true,
-        "img": "/assets/img/image2.png"
+        "img": "/assets/img/SANTA_BARBARA.jpeg"
       },
       {
         "cat_id": 3,
         "cat_name": "SAN CARLOS",
         "cat_description": "Colegio San Carlos",
         "cat_state": true,
-        "img": "/assets/img/image3.png"
+        "img": "/assets/img/SAN_CARLOS.jpeg"
       },
       {
         "cat_id": 5,
         "cat_name": "PAULA JARAQUEMADA",
         "cat_description": "Colegio Paula Jaraquemada",
         "cat_state": true,
-        "img": "/assets/img/image4.png"
+        "img": "/assets/img/PAULA_JARAQUEMADA.jpeg"
       },
       {
         "cat_id": 6,
-        "cat_name": "RAYITO",
-        "cat_description": "Colegio Rayito",
+        "cat_name": "RAYITO DE LUZ",
+        "cat_description": "Colegio Rayito de Luz",
         "cat_state": true,
-        "img": "/assets/img/image5.png"
+        "img": "/assets/img/RAYITO.jpeg"
+      },
+      {
+        "cat_id": 7,
+        "cat_name": "SANTA MARIA",
+        "cat_description": "Colegio Santa María",
+        "cat_state": true,
+        "img": "/assets/img/SANTA_MARIA.jpeg"
       }
     ]
   }

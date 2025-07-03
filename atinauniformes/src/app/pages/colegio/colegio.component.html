@@ -12,18 +12,6 @@
 
   <section class="container">
     <div class="row my-4">
-      @if(false){
-      @for (prod of products; track prod) {
-      <div class="property-card col-4">
-        <img src="{{ prod.image_url }}" alt="{{ prod.prod_id }}">
-        <h3>{{ prod.prod_name }}</h3>
-        <p>{{ prod.prod_description }}</p>
-        <p>{{ prod.prod_price }}</p>
-
-        <!-- cat_id, prod_name, prod_description, prod_price, prod_stock_quantity, prod_image_url, prod_state, prod_mdata, prod_id -->
-      </div>
-      }
-      }
       @for (prod of products; track prod) {
       <div class="col-6 col-md-3 product-card" >
         <div class="product-image">
@@ -33,9 +21,9 @@
           </div>
         </div>
         <div class="product-info">
-          <h3 class="product-name">{{ prod.prod_name }}</h3>
+          <h3 class="product-name">{{ prod.pro_nombre }}</h3>
           <p class="product-school">{{ prod.cat_name}}</p>
-          <p class="product-price">${{ prod.prod_price }}</p>
+          <p class="product-price">{{ prod.precio }}</p>
         </div>
       </div>
       }

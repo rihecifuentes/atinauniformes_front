@@ -22,7 +22,7 @@ export class ColegioComponent {
     private apiService: AppService,
     private route: ActivatedRoute
   ) {
-    this.products = [
+    let products1 = [
       {
         "prod_id": 3,
         "cat_id": 2,
@@ -58,7 +58,7 @@ export class ColegioComponent {
       }
     ]
 
-    this.nombre_colegio = this.products[0].cat_name
+    // let nombre_colegio1 = this.products[0].cat_name
   }
 
   imagenes = ['buzo1.png', 'buzo2.png', 'falda1.png', 'polar1.png', 'polera1.png']
@@ -67,6 +67,7 @@ export class ColegioComponent {
 
   ngOnInit(): void {
     const cat_id = this.route.snapshot.paramMap.get('cat_id');
+    this.loadProducts(cat_id)
   }
 
 
@@ -76,11 +77,12 @@ export class ColegioComponent {
       data => {
         console.log(data)
         this.products = data;
-
         this.nombre_colegio = this.products[0].cat_name
-        console.log(data)
+
         for (const product of this.products) {
-          product.image_url = `/assets/img/${this.imagenes[0]}`
+          product.image_url = `/assets/img/${this.imagenes[0]}`;
+          product.precio = Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(product.precios[0].pri_precio);
+          
 
         }
       },

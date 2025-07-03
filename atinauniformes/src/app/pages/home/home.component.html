@@ -15,18 +15,20 @@
   <section id="colegios" class="schools-section">
     <div class="container">
       <h2 class="section-title">Colegios Disponibles</h2>
-      <!-- <p class="section-subtitle">Selecciona tu institución para ver los uniformes específicos</p> -->
+      <p class="section-subtitle">Selecciona tu colegio para ver los uniformes específicos</p>
 
       <!-- Grid de insignias de colegios -->
       <div class="row" id="schoolsGrid">
         @for(colegio of categories; track colegio){
-        <a href="/c/{{colegio.cat_id}}" class="col-6 col-md-3 school-card">
-          <div >
-            <div class="school-badge"><img src="{{colegio.img}}" alt="" width="50"></div>
-            <h3 class="school-name">{{ colegio.cat_name }}</h3>
-            <p class="school-location">{{ colegio.cat_description }}</p>
-          </div>
-        </a>
+        <div class="col-6 col-md-3 mb-4">
+          <a href="/c/{{colegio.cat_id}}" class="school-card d-flex flex-column align-items-center"  >
+            <div class="">
+              <img src="{{colegio.img}}" alt=""  height="80">
+              <h3 class="school-name">{{ colegio.cat_description }}</h3>
+              <!-- <p class="school-location">{{ colegio.cat_description }}</p> -->
+            </div>
+          </a>
+        </div>
         }
 
       </div>

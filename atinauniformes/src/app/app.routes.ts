@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ColegioComponent } from './pages/colegio/colegio.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';
 

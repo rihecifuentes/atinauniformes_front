@@ -13,14 +13,15 @@
 }
 
 .school-card {
-    background-color: var(--white);
+    background-color: #fff;
     border-radius: 1rem;
     padding: var(--spacing-lg);
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
     cursor: pointer;
-    border: 2px solid transparent
+    border: 2px solid transparent;
+    /* transparent */
 }
 
 .school-card:hover {
