@@ -27,7 +27,7 @@
     --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 2rem;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1);
     --transition-fast: .15s ease;
@@ -44,23 +44,6 @@ body {
 }
 
 
-.header {
-    background-color: var(--white);
-    box-shadow: var(--shadow-sm);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: var(--transition-normal)
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: var(--spacing-sm) 0 */
-}
 
 .logo h1 {
     font-size: var(--font-size-2xl);

@@ -2,22 +2,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { CategoriesComponent } from './categories/categories.component';
 import { ColegioComponent } from './pages/colegio/colegio.component';
+import { CarritoCompraComponent } from './pages/carrito-compra/carrito-compra.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { SearchComponent } from './search/search.component';
+
 import { AdminComponent } from './admin/admin.component';
 
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  // { path: 'categories', component: CategoriesComponent },   //listado de categorias
   { path: 'c/:cat_id', component: ColegioComponent },   //productos de un colegio
-  // { path: 'categories/:cat_id/products', component: ProductListComponent },
-  // { path: 'products/:prod_id', component: ProductDetailComponent },
-  // { path: 'search', component: SearchComponent },
+  { path: 'carrito', component: CarritoCompraComponent },   //productos de un colegio
+  { path: 'products/:prod_id', component: ProductDetailComponent },
   { path: 'admin', component: AdminComponent, data: { titulo: 'Administracion' } },
-  // { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Perfil usuario' }, canActivate: [AuthGuard] } },
 ];
 
 

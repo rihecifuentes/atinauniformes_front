@@ -20,6 +20,7 @@ export class ProductDetailComponent {
     const prod_id = this.route.snapshot.paramMap.get('prod_id');
     this.apiService.getProductDetails(Number(prod_id)).subscribe(
       data => {
+        console.log(data)
         this.product = data;
       },
       error => {

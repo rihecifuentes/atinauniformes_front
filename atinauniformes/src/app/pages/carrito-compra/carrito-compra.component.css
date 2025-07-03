@@ -1,0 +1,12 @@
+.container{
+    background-color: #f8f9fa;
+    min-height: 60vh;
+}
+
+.card{
+    background-color: #fff;
+}
+
+.card-item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.176);
+}
