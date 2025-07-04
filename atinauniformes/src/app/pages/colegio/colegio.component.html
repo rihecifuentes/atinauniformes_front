@@ -3,6 +3,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
+        <img src="{{logo_colegio}}" alt="" height="120">
         <h2 class="hero-title">Colegio {{nombre_colegio}}</h2>
         <p class="hero-description">Encuentra los mejores uniformes para tu colegio. Comodidad y estilo en cada prenda, 
           que dura todo el año</p>
@@ -15,7 +16,7 @@
       @for (prod of products; track prod) {
       <div class="col-6 col-md-3 product-card" >
         <div class="product-image">
-          <img src="/assets/img/polera1.png" alt="Polera San Patricio">
+          <img src="/assets/img/polera1.png" alt="Polera San Patricio" >
           <div class="product-overlay">
             <!-- <button class="quick-view" >Vista Rápida</button> -->
             <a href="/products/{{prod.pro_id}}"  class="quick-view">Ver</a>

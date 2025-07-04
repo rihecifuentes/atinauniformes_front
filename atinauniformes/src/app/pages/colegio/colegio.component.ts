@@ -17,6 +17,7 @@ export class ColegioComponent {
   errorMessage: string = '';
 
   nombre_colegio = ''
+  logo_colegio = '';
 
   constructor(
     private apiService: AppService,
@@ -77,7 +78,10 @@ export class ColegioComponent {
       data => {
         console.log(data)
         this.products = data;
-        this.nombre_colegio = this.products[0].cat_name
+        this.nombre_colegio = this.products[0].cat_name;
+        this.logo_colegio = `/assets/img/${this.products[0].logo_colegio}`;
+
+
 
         for (const product of this.products) {
           product.image_url = `/assets/img/${this.imagenes[0]}`;

@@ -112,10 +112,6 @@ body {
     border-radius: 2px
 }
 
-.main {
-    margin-top: 100px
-}
-
 .hero {
     background: linear-gradient(135deg,var(--primary-color) 0%,var(--accent-color) 100%);
     color: var(--white);
@@ -137,7 +133,7 @@ body {
 
 .hero-description {
     font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-xl);
+    /* margin-bottom: var(--spacing-xl); */
     opacity: .9;
     font-weight: 300
 }
