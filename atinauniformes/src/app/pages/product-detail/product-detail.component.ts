@@ -13,6 +13,7 @@ export class ProductDetailComponent {
 
   product: any;
   errorMessage: string = '';
+  logo_colegio: string = '';
 
   constructor(private apiService: AppService, private route: ActivatedRoute) { }
 
@@ -22,6 +23,7 @@ export class ProductDetailComponent {
       data => {
         console.log(data)
         this.product = data;
+        this.logo_colegio = `/assets/img/${this.product.logo_colegio}`;
       },
       error => {
         this.errorMessage = error;

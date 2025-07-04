@@ -1,0 +1,8 @@
+.container{
+    max-width: 80rem;
+    padding: 32px;
+}
+
+.card-img{
+    border-radius: 1rem;
+}
